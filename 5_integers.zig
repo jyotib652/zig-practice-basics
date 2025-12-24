@@ -68,4 +68,14 @@ pub fn main() void {
     // Then, the result + num2 is calculated and casted to u16.
     // So, only the first operand needs to be casted to u16.
     print("result: {}\n", .{result});
+
+    // Integers normally holds decimal(base 10) values, but integers can also represent numbers in binary, octal, and hexadecimal formats.
+    const binary_value: u8 = 0b101010; // Binary representation (base 2)
+    const octal_value: u8 = 0o52; // Octal representation (base 8)
+    const hex_value: u8 = 0x2A; // Hexadecimal representation (base 16)
+    print("binary_value: {}\n", .{binary_value});
+    print("octal_value: {}\n", .{octal_value});
+    print("hex_value: {}\n", .{hex_value});
+    const million: u32 = 1_000_000; // Using underscores for better readability, it does not affect the value.
+    print("million: {}\n", .{million});
 }

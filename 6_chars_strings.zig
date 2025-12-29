@@ -43,6 +43,9 @@ pub fn main() void {
     const concat_string = a_string ++ " " ++ another_string;
     // s specifier is needed to print strings: {s}
     print("Concatenated string: {s}\n", .{concat_string}); // Don't forget to use {s} for strings to print strings.
+    // String must be an array of unsigned 8-bit integers (u8). Each character in the string is represented by its ASCII value.
+    // String are immutable by default.
+
     // Multi line strings
     const multiple_strings =
         \\Multiline string

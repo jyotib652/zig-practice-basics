@@ -155,3 +155,12 @@ pub fn main() void {
     const tuple5 = tuple3 ** 3; // multiplying a tuple. It just repeats the elements
     print("tuple5: {} with length: {} \n", .{ tuple5, tuple5.len });
 }
+
+// // Note:
+// Fields:
+//     - Belongs to a instance of a struct
+//     - Mutable if the struct instance is mutable
+// Variables:
+//     - Belong to the struct(type)
+//     - Shared between struct instances (static)
+//     - Mutable if the variable itself mutable

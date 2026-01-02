@@ -17,6 +17,7 @@ fn Point(comptime T: type) type {
 // Let's implement a simple linked list for the sake of demonstaration
 fn LinkedList(comptime T: type) type {
     return struct { data: T, next: ?*@This() = null }; // instead of @This, we can use LinkedList(T) both are same
+    // we're using ? because it may be a value or null
 }
 
 pub fn main() void {

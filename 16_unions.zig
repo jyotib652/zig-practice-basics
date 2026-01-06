@@ -33,7 +33,7 @@ const TaggedUnion = union(DataTypes) {
 
 // We don't need to use already existing enums for tagged union,
 // we can infer the enum
-const InferredTaggedUnion = union(enum) { field1: u8, field2: f16 }; // Here we're not using any existing enum
+const InferredTaggedUnion = union(enum) { field1: u8, field2: f16 }; // Here we're not using any existing enum. The enum is inferred
 
 // A union and a tagged union can have functions and variables just like a enum & struct. The same rules apply
 

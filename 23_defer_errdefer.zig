@@ -4,18 +4,19 @@ const print = @import("std").debug.print;
 
 pub fn main() !void { // using !void due to the requirement for the line "try err_union"
     // defer is used to execute expressions at scope exit
-    // print("Goodbye \n", .{}); // Explanation: check line no. 26
+    // print("Goodbye \n", .{}); // Explanation: check line no. 27
 
     // For multiple defer statements, they're executed in reverse order
     print("\n", .{});
     defer print("Goodbye \n", .{});
+    // For multiple errdefer statements, they're executed in reverse order
     errdefer print("Program crashed \n", .{});
     defer print("Preparing to shut down ...\n", .{});
     print("Start \n", .{});
 
     print("Main function body1 \n", .{});
 
-    errdefer print("Program crashed \n", .{}); // Explanation: check line no. 68
+    // errdefer print("Program crashed \n", .{}); // Explanation: check line no. 69
     // let's move this up with other defer statements
 
     // Let's enforce an error in the middle of the function(main())
@@ -75,3 +76,5 @@ pub fn main() !void { // using !void due to the requirement for the line "try er
     // defer print("Goodbye \n", .{});
     print("Main function body2  \n", .{});
 }
+
+// Both defer and errdefer expressions get executed in REVERSE order.

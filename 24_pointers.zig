@@ -54,6 +54,7 @@ pub fn main() void {
     print("\n", .{});
     var arr1 = [6]u8{ 3, 1, 4, 1, 5, 9 };
     const arr2 = [_]u8{ 1, 2, 3 };
+    // Syntax of Single item pointers: *[type] and *const[type]
     const many_item_ptr: [*]u8 = &arr1; // many item pointer
     const many_item_ptr2: [*]const u8 = &arr2; // many item pointer
     print("first element of many_item_ptr: {} \n", .{many_item_ptr[0]});

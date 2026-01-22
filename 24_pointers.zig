@@ -80,7 +80,7 @@ pub fn main() void {
     print("first element of many_item_pointer: {} \n", .{many_item_ptr[0]});
     print("tenth element of many_item_pointer: {} \n", .{many_item_ptr[10]}); // this is dangerous behaviour
 
-    // V.V.I: Once a function returns variables declared inside the function gets discarded
+    // V.V.I: Once a function returns; variables declared inside the function gets discarded
     // and any pointers to those variables in the function become invalid references. It is
     // invalid to return a pointer by a function or use a pointer created inside a function
     // to modify some value outside of the function
